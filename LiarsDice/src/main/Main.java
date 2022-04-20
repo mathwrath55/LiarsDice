@@ -22,9 +22,9 @@ public class Main {
 		Player TBB1 = new TrustBreakerBot("TBBot1");
 		List<Player> Players = new ArrayList<Player>();
 		//List<Player> Players = Arrays.asList(EB1, NB1);
-		Players.add(Me);
+		//Players.add(Me);
 		//Players.add(TBB1);
-		//Players.add(TB1);
+		Players.add(TB1);
 		Players.add(NB1);
 		//Players.add(CheatB1);
 		//SimulateOne(Players, 5);
