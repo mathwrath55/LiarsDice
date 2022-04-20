@@ -15,7 +15,9 @@ public class Main {
 		Player NB1 = new NaiveBot("NaiveBot1");
 		Player NB2 = new NaiveBot("NaiveBot2");
 		Player NB3 = new NaiveBot("NaiveBot3");
-		Player CheatB1 = new CheatBot("CBot1");
+		Player CheatB1 = new CheatBot("CheatBot1");
+		Player CheatB2 = new CheatBot("CheatBot2");
+		Player CBB1 = new CheatBeaterBot("AntiCheat1");
 		Player EB1 = new ExpectedBot("EBot1");
 		Player TB1 = new TrustBot("TBot1");
 		Player TB2 = new TrustBot("TBot2");
@@ -24,11 +26,13 @@ public class Main {
 		//List<Player> Players = Arrays.asList(EB1, NB1);
 		//Players.add(Me);
 		//Players.add(TBB1);
-		Players.add(TB1);
+		//Players.add(TB1);
 		Players.add(NB1);
+		Players.add(CBB1);
 		//Players.add(CheatB1);
+		//Players.add(CheatB2);
 		//SimulateOne(Players, 5);
-		SimulateMany(Players, 3, 1000000);
+		SimulateMany(Players, 5, 100000);
 	}
 	public static void SimulateMany(List<Player> Players, int numDice, int numGames) {
 		int[] countWins = new int[Players.size()];

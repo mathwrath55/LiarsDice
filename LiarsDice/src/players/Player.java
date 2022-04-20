@@ -8,7 +8,7 @@ public abstract class Player {
 	protected List<Integer> Dice;
 	public String name = "";
 	public boolean isPerson;
-	Random rnd = Utilities.rnd;
+	public static Random rnd = Utilities.rnd;
 	
 	public void Roll() {
 		Dice = new ArrayList<Integer>();

@@ -8,6 +8,7 @@ public class CheatBot extends Bot {
 	//If the previous person made that exact guess, CheatBot raises it by 1 die
 	//This is because CheatBot wants to start each round
 	//CheatBot only calls if the previous guess was higher than the highest possible guess.
+	//If CheatBot gets the first turn of the game, it is literally unbeatable- even by another CheatBot.
 	public CheatBot(String n) {
 		name = n;
 	}
