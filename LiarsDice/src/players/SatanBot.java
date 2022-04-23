@@ -5,14 +5,14 @@ import java.util.List;
 import main.CheatUtilities;
 import main.Utilities;
 
-public class CheatBeaterBot extends Bot {
-	//CheatBeaterBot attempts to win as many games as possible against the cheating bot in a 1v1.
+public class SatanBot extends Bot {
+	//SatanBot attempts to win as many games as possible against the cheating bot in a 1v1.
 	//It must play first, and it must guess the exact maximum guess every time to win.
 	//It is impossible to win every time
 	//It picks whichever number it has the most of, then predicts the number of that roll which is most likely to win.
-	//In a 5-dice 1v1 with CheatBot, it wins ~0.5% of the time if it goes first
+	//In a 5-dice 1v1 with GodBot, it wins ~0.5% of the time if it goes first
 	//In a 3-dice 1v1, it wins ~5.4% of the time.
-	public CheatBeaterBot(String n) {
+	public SatanBot(String n) {
 		name = n;
 	}
 	public int Guess(List<Player> Players, List<Integer> stillIn, List<Integer> prevGuesses) {
@@ -73,14 +73,11 @@ public class CheatBeaterBot extends Bot {
 				break;
 			}
 		}
-		//System.out.println(Dice);
-		//System.out.println(bestGuessNum*10+myDie);
 		return bestGuessNum*10 + myDie;
 	}
 	private static int roll1Random(int toAvoid) {
 		int base = rnd.nextInt(5) + 1;
 		if(base == toAvoid) base = 6;
-		//System.out.print(base);
 		return base;
 	}
 }

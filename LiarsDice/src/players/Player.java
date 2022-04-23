@@ -48,5 +48,13 @@ public abstract class Player {
 		int prevIndex = (indexInStillIn + numPlayers - 1)%numPlayers;
 		return stillIn.get(prevIndex);
 	}
+	public int nextIndex(List<Player> Players, List<Integer> stillIn) {
+		//returns the index in Players of the player who played before this player
+		int myIndex = myIndex(Players, stillIn);
+		int indexInStillIn = stillIn.indexOf(myIndex);
+		int numPlayers = stillIn.size();
+		int nextIndex = (indexInStillIn + 1)%numPlayers;
+		return stillIn.get(nextIndex);
+	}
 
 }
